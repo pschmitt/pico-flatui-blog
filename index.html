@@ -1,11 +1,10 @@
 {%include "head.twig" %}
         {% if not is_front_page %}
 			<div class="navigation-block">
-				<ul id="sliding-navigation">
-                    <li class="sliding-element"><h3>Navigation Title</h3></li>
+				<ul class="xbreadcrumbs" id="breadcrumbs-1">
 					{% for page in pages %}
 						{% if not page.date %}
-						<li class="sliding-element"><a href="{{ page.url }}">{{ page.title }}</a></li>
+						<li><a href="{{ page.url }}">{{ page.title }}</a></li>
 						{% endif %}
 					{% endfor %}
 				</ul>

@@ -16,12 +16,21 @@
 	    <link rel="stylesheet" href="{{ theme_url }}/asset/css/style.css">	
 		<link rel="stylesheet" href="{{ theme_url }}/asset/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/style.css" media="screen,projection,print">
-        <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/print.css" media="print">        
-        <link rel="stylesheet" href="{{ theme_url }}/asset/css/menu.css">	
+        <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/print.css" media="print">
+        <link rel="stylesheet" href="{{ theme_url }}/asset/css/xbreadcrumbs.css">
+        <link rel="stylesheet" href="{{ theme_url }}/asset/css/menu.css">
         <!-- Le magic javascripts -->
         <script src="{{ theme_url }}/asset/js/jquery-2.1.0.min.js"></script>
-         <script src="{{ theme_url }}/asset/js/sliding_effect.js"></script>
+        <script src="{{ theme_url }}/asset/js/xbreadcrumbs.js"></script>
         <script src="{{ base_url }}/plugins/mcb_TableOfContent/code.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+                //  Initialize xBreadcrumbs
+                $('#breadcrumbs-1').xBreadcrumbs();
+                $('#breadcrumbs-2').xBreadcrumbs({ collapsible: true });
+                $('#breadcrumbs-3').xBreadcrumbs();
+            });
+        </script>
 	</head>
 	<body>
     {{ mcb_toc_top }}
