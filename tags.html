@@ -1,0 +1,41 @@
+{%include "head.twig" %}
+		<div class="container-narrow">
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    {% for page in pages %}
+                        {% if not page.date %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
+            </div>
+
+            <hr>
+        
+            <div class="row-fluid marketing">
+                <div class="span12">
+                    <h1>{{ meta.title }}</h1>
+                    {{ content }}
+                    <div id="all-tags">
+                        {% set uniqTags = [] %}
+                        {% for page in pages %}
+                            <!-- display single page tags with proper urls -->
+                            {% for tag in page.tags %}
+                                {% if tag | e and tag not in uniqTags %}
+                                    {% set uniqTags = uniqTags | merge([tag]) %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                        {% if uniqTags %}
+                            <ol>
+                            {% for tag in uniqTags | sort %}
+                                <li><a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a></li>
+                            {% endfor %}
+                            </ol>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+{% include "foot.twig" %}
