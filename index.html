@@ -1,22 +1,23 @@
 {%include "head.twig" %}
-		<div class="container-narrow">
-			
-			{% if not is_front_page %}
-			<div class="masthead">
-				<ul class="nav nav-pills pull-right">
+        {% if not is_front_page %}
+			<div class="navigation-block">
+				<ul id="sliding-navigation">
+                    <li class="sliding-element"><h3>Navigation Title</h3></li>
 					{% for page in pages %}
 						{% if not page.date %}
-						<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+						<li class="sliding-element"><a href="{{ page.url }}">{{ page.title }}</a></li>
 						{% endif %}
 					{% endfor %}
 				</ul>
-				<h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
+				
 			</div>
-
-			<hr>
-			{% endif %}
+        {% endif %}
+        <div class="container-narrow">
+			<h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
+            
+            <hr />
 			
-			{% if is_front_page %}
+            {% if is_front_page %}
 			<div class="jumbotron">
 				<h1>{{ site_title }}</h1>
 				<div class="lead">
