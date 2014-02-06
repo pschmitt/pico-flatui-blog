@@ -39,6 +39,28 @@
 				</div>
 				{% endif %}
 			{% endfor %}
+            {% elseif pages and meta.title != 'Error 404' %}
+            <!-- tags page -->
+                <p>Posts tagged <a href="{{ page.url }}">#{{ current_tag }}</a>:</p>
+                {% for page in pages %}
+                    {% if page.date %}
+                        <article>
+                            <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                            <p class="meta">Posted on {{ page.date_formatted }} by {{ page.author }}
+                                <span class="tags"><br />Tags:
+                                    {% for tag in page.tags %}
+                                        <a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a>
+                                    {% endfor %}
+                                </span>
+                            </p>
+                            <p class="excerpt">
+                                {{ page.excerpt }}
+                                <a href="{{ page.url }}">Lire la suite</a>
+                            </p>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            <!-- tags page -->
 			{% else %}
 			<div class="row-fluid marketing">
 				<div class="span12">
