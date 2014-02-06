@@ -1,15 +1,7 @@
 {%include "head.twig" %}
+{%include "menu.twig" %}
 		<div class="container-narrow">
-            <div class="masthead">
-                <ul class="nav nav-pills pull-right">
-                    {% for page in pages %}
-                        {% if not page.date %}
-                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
-            </div>
+            <h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
 
             <hr>
         

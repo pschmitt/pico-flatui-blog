@@ -1,13 +1,5 @@
 {%include "head.twig" %}
-        <div id="navigation-block">
-            <ul id="navigation">    
-                {% for page in pages %}
-                    {% if not page.date %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
+{%include "menu.twig" %}
         <div class="container-narrow">
 			<h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
 
