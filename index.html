@@ -1,16 +1,13 @@
 {%include "head.twig" %}
-        {% if not is_front_page %}
-			<div class="navigation-block">
-				<ul class="xbreadcrumbs" id="breadcrumbs-1">
-					{% for page in pages %}
-						{% if not page.date %}
-						<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-						{% endif %}
-					{% endfor %}
-				</ul>
-				
-			</div>
-        {% endif %}
+        <div id="navigation-block">
+            <ul id="navigation">    
+                {% for page in pages %}
+                    {% if not page.date %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
         <div class="container-narrow">
 			<h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
             

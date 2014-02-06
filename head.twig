@@ -4,9 +4,15 @@
 		<meta charset="utf-8">
 		<title>{% if not is_front_page %}{{ meta.title }} &middot; {% endif %}{{ site_title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{ meta.description }}">
-		<meta name="author" content="{{ meta.author }}">
-		<meta name="robots" content="{{ meta.robots }}">
+		{% if meta.description %}
+        <meta name="description" content="{{ meta.description }}">
+        {% endif %}
+		{% if meta.author %}
+        <meta name="author" content="{{ meta.author }}">
+        {% endif %}
+        {% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}">
+        {% endif %}
 		
 		<!-- rss feed -->
 		<link rel="alternate" href="{{ base_url }}/feed" type="application/rss+xml" title="RSS">
@@ -17,19 +23,16 @@
 		<link rel="stylesheet" href="{{ theme_url }}/asset/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/style.css" media="screen,projection,print">
         <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/print.css" media="print">
-        <link rel="stylesheet" href="{{ theme_url }}/asset/css/xbreadcrumbs.css">
         <link rel="stylesheet" href="{{ theme_url }}/asset/css/menu.css">
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        
         <!-- Le magic javascripts -->
         <script src="{{ theme_url }}/asset/js/jquery-2.1.0.min.js"></script>
         <script src="{{ theme_url }}/asset/js/xbreadcrumbs.js"></script>
         <script src="{{ base_url }}/plugins/mcb_TableOfContent/code.js"></script>
+        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
         <script type="text/javascript">
-           $(document).ready(function(){
-                //  Initialize xBreadcrumbs
-                $('#breadcrumbs-1').xBreadcrumbs();
-                $('#breadcrumbs-2').xBreadcrumbs({ collapsible: true });
-                $('#breadcrumbs-3').xBreadcrumbs();
-            });
+           hljs.initHighlightingOnLoad();
         </script>
 	</head>
 	<body>
