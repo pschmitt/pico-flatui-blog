@@ -25,14 +25,27 @@
         <link rel="stylesheet" href="{{ base_url }}/plugins/mcb_TableOfContent/print.css" media="print">
         <link rel="stylesheet" href="{{ theme_url }}/asset/css/menu.css">
         <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        <link rel="stylesheet" href="{{ theme_url }}/asset/css/social-sharing-css.css">
+        <link rel="stylesheet" href="{{ theme_url }}/asset/css/kraken-buttons.css">
+        <link rel="stylesheet" href="{{ theme_url }}/asset/css/swipe.css">
         
         <!-- Le magic javascripts -->
         <script src="{{ theme_url }}/asset/js/jquery-2.1.0.min.js"></script>
-        <script src="{{ theme_url }}/asset/js/xbreadcrumbs.js"></script>
         <script src="{{ base_url }}/plugins/mcb_TableOfContent/code.js"></script>
         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script src="{{ theme_url }}/asset/js/swipe.js"></script>
         <script type="text/javascript">
            hljs.initHighlightingOnLoad();
+           var elem = document.getElementById('slider');
+            window.mySwipe = Swipe(elem, {
+                              // startSlide: 4,
+                              // auto: 3000,
+                              // continuous: true,
+                              // disableScroll: true,
+                              // stopPropagation: true,
+                              // callback: function(index, element) {},
+                              // transitionEnd: function(index, element) {}
+                            });
         </script>
 	</head>
 	<body>

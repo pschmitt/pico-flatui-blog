@@ -1,11 +1,13 @@
 {%include "head.twig" %}
 {%include "menu.twig" %}
         <div class="container-narrow">
+            {% if not is_front_page %}
 			<h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
 
             <hr />
-
+            {% endif %}
             {% if is_front_page %}
+            <!-- front page -->
 			<div class="jumbotron">
 				<h1>{{ site_title }}</h1>
 				<div class="lead">
@@ -14,7 +16,6 @@
 			</div>
 
 			<hr>
-
 			{% for page in pages %}
 				{% if page.date %}
 				<div class="row-fluid post-listing">
@@ -27,6 +28,7 @@
 				</div>
 				{% endif %}
 			{% endfor %}
+            <!-- front page -->
             {% elseif pages and not meta.tags and meta.title != 'Error 404' %}
             <!-- tags page -->
                 <p>Posts tagged <a href="{{ page.url }}">#{{ current_tag }}</a>:</p>
@@ -55,10 +57,18 @@
 				<div class="span12">
 					<h1>{{ meta.title }}</h1>
                         {%if meta.date %}
-                            <p class="lead meta muted">{{ meta.date_formatted }}</p>
+                            <p class="lead meta muted">
+                                {{ meta.date_formatted }}
+                                <span class="tags"><br />Tags:
+                                    {% for tag in meta.tags %}
+                                        <a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a>
+                                    {% endfor %}
+                                </span>
+                            </p>
                         {% endif %}
                     {{ mcb_toc }}
 					{{ content }}
+                    {{ social_share }}
 				</div>
 			</div>
             <!-- post -->

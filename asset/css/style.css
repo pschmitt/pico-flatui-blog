@@ -64,3 +64,11 @@ img {
     margin-top: 1em;
 }
 
+#share
+{
+    list-style: none;
+}
+#share li a 
+{
+    float:left;
+}
