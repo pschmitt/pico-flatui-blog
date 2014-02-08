@@ -66,9 +66,12 @@ img {
 
 #share
 {
+    width: 60%;
+    margin: auto;    
     list-style: none;
 }
-#share li a 
+#share li  
 {
+    margin-left: 0.3em;
     float:left;
 }

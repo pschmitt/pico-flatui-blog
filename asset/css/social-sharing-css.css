@@ -10,12 +10,12 @@
  * ============================================================= */
 /*  Variables */
 /*  Twitter */
-.btn-tweet {
+.btn-twitter {
   background-color: #41b7d8;
   border-color: #41b7d8;
 }
 
-.btn-tweet:hover,
+.btn-twitter:hover,
 a .btn-tweet:hover {
   background-color: #238caa;
   border-color: #238caa;
