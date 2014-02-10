@@ -47,6 +47,8 @@ img {
     max-width: 100%;
     margin: auto;
     display: block;
+    box-shadow: 1px 1px 12px #555;
+    border-radius: 5px;
 }
 
 /* All tags page */
