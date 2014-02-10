@@ -72,11 +72,11 @@
 }
 
 @media screen and (max-width: 600px) {
-	.bmenu {
+	#navigation-block {
 		position: relative;
 		min-height: 40px;
 	}	
-	.bmenu ul {
+	#navigation-block ul {
 		width: 180px;
 		padding: 5px 0;
 		position: absolute;
@@ -87,43 +87,43 @@
 		border-radius: 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
 	}
-	.bmenu li {
+	#navigation-block li {
 		display: none; /* hide all <li> items */
 		margin: 0;
 	}
-	.bmenu .is-active {
+	#navigation-block .is-active {
 		display: block; /* show only current <li> item */
 	}
-	.bmenu a {
+	#navigation-block a {
 		display: block;
 		padding: 5px 5px 5px 32px;
 		text-align: left;
 	}
-	.bmenuk .is-active a {
+	#navigation-block .is-active a {
 		background: none;
 		color: #666;
 	}
 
 	/* on nav hover */
-	.bmenu ul:hover {
+	#navigation-block ul:hover {
 		background-image: none;
 	}
-	.bmenu ul:hover li {
+	#navigation-block ul:hover li {
 		display: block;
 		margin: 0 0 5px;
 	}
-	.bmenu ul:hover .is-active {
+	#navigation-block ul:hover .is-active {
 		background: url(images/icon-check.png) no-repeat 10px 7px;
 	}
 
 	/* right nav */
-	.bmenu.right ul {
+	#navigation-block.right ul {
 		left: auto;
 		right: 0;
 	}
 
 	/* center nav */
-	.bmenu.center ul {
+	#navigation-block.center ul {
 		left: 50%;
 		margin-left: -90px;
 	}
