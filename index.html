@@ -32,7 +32,7 @@
             {% elseif pages and not meta.tags and meta.title != 'Error 404' %}
             <!-- tags page -->
                 {% if current_tag %}
-                    <p>Posts tagged <a href="{{ page.url }}">#{{ current_tag }}</a>:</p>
+                    <p>Posts tagg&eacute;s <a title="Voir les posts taggu&eacute;s {{ current_tag }}" href="{{ page.url }}">#{{ current_tag }}</a>:</p>
                 {% endif %}
                 {% for page in pages %}
                     {% if page.date %}
@@ -41,13 +41,13 @@
                             <p class="meta">Post&eacute; le {{ page.date_formatted }} par {{ page.author }}
                                 <span class="tags"><br />Tags:
                                     {% for tag in page.tags %}
-                                        <a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a>
+                                        <a title="Voir les posts taggu&eacute;s {{ tag }}" href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a>
                                     {% endfor %}
                                 </span>
                             </p>
                             <p class="excerpt">
                                 {{ page.excerpt }}
-                                <a href="{{ page.url }}">Lire la suite</a>
+                                <a title="Vers l'article {{ page.title }}" href="{{ page.url }}">Lire la suite</a>
                             </p>
                         </article>
                     {% endif %}
