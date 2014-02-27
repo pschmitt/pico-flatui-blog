@@ -22,7 +22,7 @@
                         {% if uniqTags %}
                             <ol>
                             {% for tag in uniqTags | sort %}
-                                <li><a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a></li>
+                                <li><a title="Voir les posts taggu&eacute;s {{ tag }}" href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a></li>
                             {% endfor %}
                             </ol>
                         {% endif %}
