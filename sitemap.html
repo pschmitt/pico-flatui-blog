@@ -1,0 +1,15 @@
+{%include "head.twig" %}
+{%include "menu.twig" %}
+		<div class="container-narrow">
+            <h3 class="muted"><a href="{{ base_url }}">{{ site_title }}</a></h3>
+
+            <hr>
+        
+            <div class="row-fluid marketing">
+                <div class="span12">
+                    <h1>{{ meta.title }}</h1>
+                    {{ content }}
+                </div>
+            </div>
+
+{% include "foot.twig" %}

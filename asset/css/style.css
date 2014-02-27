@@ -56,12 +56,12 @@ img {
     /* text-align: center; */
 }
 
-#all-tags ol {
+#all-tags ol, .sitemap {
     list-style-type: none;
     padding-left: 0;
 }
 
-#all-tags li {
+#all-tags li, .sitemap li {
     font-size: 1.3em;
     margin-top: 1em;
 }
