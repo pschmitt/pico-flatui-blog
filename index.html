@@ -31,7 +31,9 @@
             <!-- front page -->
             {% elseif pages and not meta.tags and meta.title != 'Error 404' %}
             <!-- tags page -->
-                <p>Posts tagged <a href="{{ page.url }}">#{{ current_tag }}</a>:</p>
+                {% if current_tag %}
+                    <p>Posts tagged <a href="{{ page.url }}">#{{ current_tag }}</a>:</p>
+                {% endif %}
                 {% for page in pages %}
                     {% if page.date %}
                         <article>
