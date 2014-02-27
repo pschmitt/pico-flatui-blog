@@ -66,9 +66,18 @@ img {
     margin-top: 1em;
 }
 
+div.social {
+    margin-top: 2em;
+    text-align: center;
+}
+
+div.social p {
+    font-style: italic;
+}
+
 #share
 {
-    width: 60%;
+    width: 55%;
     margin: auto;    
     list-style: none;
 }
